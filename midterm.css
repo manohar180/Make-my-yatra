@@ -1,0 +1,145 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+    transition: background 0.5s ease-in-out;
+}
+.logo{
+    width:175px;
+    height:auto;
+    padding-top:30px;
+    padding-bottom:0px;
+}
+h1 {
+    margin: 30px 0;
+    font-size: 3.5rem;
+    color: #fbf9f9;
+    animation: fadeInDown 1s;
+}
+.form-container {
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 500px;
+    background: rgba(241, 241, 243, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: slideInUp 1s;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.form-container:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+input, button {
+    width: 85%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    outline: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+input:focus, button:focus {
+    box-shadow: 0 0 8px rgba(1, 150, 135, 0.8);
+}
+input {
+    background-color: #f4f4f9;
+}
+button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 1rem;
+    width: 200px;
+    margin: 10px auto;
+}
+button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+.buses-container {
+    margin-top: 20px;
+    display: none;
+    animation: fadeIn 1s;
+}
+.bus {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 10px;
+    max-width: 500px;
+    transition: transform 0.3s;
+}
+.bus:hover {
+    transform: scale(1.05);
+}
+.seat-layout {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+.seat {
+    width: 45px;
+    height: 45px;
+    background: #eee;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s, background 0.5s;
+}
+.seat:hover {
+    transform: scale(1.1);
+    background: #d4edda;
+}
+.seat.selected {
+    background: #4caf50;
+    color: white;
+}
+.deck-label {
+    grid-column: span 4;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4caf50;
+    font-size: 1.3rem;
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+    .bus {
+        width: 90%;
+    }
+    button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        width: 180px;
+    }
+}
