@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make My Yatra</title>
+    <link rel="stylesheet" href="midterm.css">
+    <image src="https://companieslogo.com/img/orig/YTRA_BIG-b94c937a.png?t=1720244494" class="logo"></image>
+</head>
+<body>
+    <h1>Make My Yatra</h1>
+    <div class="form-container">
+        <input list="cityList" id="from" placeholder="From Destination" />
+        <input list="cityList" id="to" placeholder="To Destination" />
+        <input type="date" id="date" placeholder="Select Date" />
+        <datalist id="cityList">
+            <option value="Delhi">
+            <option value="Mumbai">
+            <option value="Chennai">
+            <option value="Kolkata">
+            <option value="Bangalore">
+            <option value="Guntur">
+            <option value="Hyderabad">
+            <option value="Ahmedabad">
+            <option value="Pune">
+            <option value="Jaipur">
+            <option value="Lucknow">
+        </datalist>
+        <button onclick="searchBuses()">Search Buses</button>
+    </div>
+    <div class="buses-container" id="busesContainer"></div>
+    <script src="midterm.js"></script>
+</body>
+</html>
